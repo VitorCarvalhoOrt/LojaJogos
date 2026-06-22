@@ -13,7 +13,7 @@ class Desenvolvedor(models.Model):
 class Plataforma(models.Model):
     tipo = models.CharField(max_length=32)
     nome = models.CharField(max_length=128)
-    ano_lancamento = models.DateField()
+    ano_lancamento = models.DateField(blank=True, null=True)
     geracao = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
